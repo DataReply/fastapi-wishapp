@@ -1,0 +1,11 @@
+# Intelij
+.idea/
+*.iml
+*.ipr
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
