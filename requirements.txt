@@ -1,2 +1,6 @@
 fastapi
 uvicorn
+pyjwt
+bcrypt
+passlib
+python-multipart

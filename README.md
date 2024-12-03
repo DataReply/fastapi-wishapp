@@ -55,3 +55,17 @@ git checkout origin/step-2
 * New endpoints vs Nested Endpoints
 * Singular vs Plural Nouns
 * Filtering, Sorting, and Pagination
+
+### Step 3: User Authentication
+```shell
+git checkout origin/step-3
+```
+With this step we implement user authentication using JWT tokens.
+
+In order to get the tokens we implement two endpoints:
+* `/auth/token`: To get the token. This returns two tokens:
+  * token: is a short lived token the the client needs to refresh regularly
+  * refresh_token: is a long lived token that can be used to get a new token
+* `/auth/refresh`: To refresh the token via a `refresh_token`.
+
+In addition we are using a dependency in all existing endpoints to check if the user is authenticated.
