@@ -32,3 +32,26 @@ python -m app.server
 git checkout origin/step-1
 ```
 In the first step, we will create a simple FastAPI application with a basic project structure.
+
+### Step 2: Wishapp APIs
+```shell
+git checkout origin/step-2
+```
+
+#### What is an API?
+* A set of rules and protocols that allow different software systems to communicate with each other.
+* APIs enable interaction between applications without needing direct human intervention.
+
+#### What is a REST API?
+* REST = Representational State Transfer
+* Key Characteristics:
+  * Stateless: Each request from a client to the server must contain all the information needed to process it.
+  * Resource-Oriented: Focuses on resources, identified by URLs.
+  * Standard HTTP Methods: CRUD operations mapped to HTTP verbs (GET, POST, PUT, DELETE).
+  * Popularity: REST is widely used due to its simplicity and scalability.
+
+#### Design considerations
+* Direct vs Full Path Endpoints
+* New endpoints vs Nested Endpoints
+* Singular vs Plural Nouns
+* Filtering, Sorting, and Pagination
