@@ -2,6 +2,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends
 
+from routers.security import User, get_current_user
 from app.database import DbSession
 from app.models.base import PrimaryKeyType
 from app.models.user import User
