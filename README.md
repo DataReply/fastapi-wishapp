@@ -68,4 +68,4 @@ In order to get the tokens we implement two endpoints:
   * refresh_token: is a long lived token that can be used to get a new token
 * `/auth/refresh`: To refresh the token via a `refresh_token`.
 
-In addition we are using a dependency in all existing endpoints to check if the user is authenticated.
+In addition, we are using a dependency in all existing endpoints to check if the user is authenticated.
