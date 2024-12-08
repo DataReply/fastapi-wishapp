@@ -16,12 +16,13 @@ TOKEN_TYPE_REFRESH = "refresh"
 
 @router.post("/token")
 async def login(
-        form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
+        form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+        db: DbSession
 ) -> Token:
     if len(form_data.username) <= 1:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
 
-    user = authenticate_user(form_data.username, form_data.password)
+    user = authenticate_user(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -41,7 +42,7 @@ async def login(
 
 
 @router.post("/refresh")
-async def refresh(token_data: RefreshToken) -> Token:
+async def refresh(token_data: RefreshToken, db: DbSession) -> Token:
     try:
         payload = get_jwt_payload(token_data.token)
         token_type = payload.get("token_type")
@@ -52,7 +53,7 @@ async def refresh(token_data: RefreshToken) -> Token:
                 headers={"WWW-Authenticate": "Bearer"},
             )
         email = payload.get("sub")
-        user = get_active_user(email)
+        user = get_active_user(email, db)
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
