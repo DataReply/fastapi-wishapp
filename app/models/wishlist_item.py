@@ -1,8 +1,6 @@
-import uuid
-
 from sqlmodel import SQLModel, Field, Relationship
 
-from models.base import SqlBaseModel
+from models.base import SqlBaseModel, PrimaryKeyType
 
 
 class WishlistItemCreate(SQLModel):
@@ -14,7 +12,7 @@ class WishlistItem(SqlBaseModel, table=True):
 
     name: str = Field(unique=True, index=True)
     quantity: int = Field(ge=1, default=1)
-    wishlist_id: str = Field(foreign_key="wishlists.id")
+    wishlist_id: PrimaryKeyType = Field(foreign_key="wishlists.id")
 
 
     wishlist: "Wishlist" = Relationship(back_populates="items")
