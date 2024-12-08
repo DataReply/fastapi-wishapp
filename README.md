@@ -64,8 +64,20 @@ With this step we implement user authentication using JWT tokens.
 
 In order to get the tokens we implement two endpoints:
 * `/auth/token`: To get the token. This returns two tokens:
-  * token: is a short lived token the the client needs to refresh regularly
-  * refresh_token: is a long lived token that can be used to get a new token
+  * token: is a short-lived token the client needs to refresh regularly
+  * refresh_token: is a long-lived token that can be used to get a new token
 * `/auth/refresh`: To refresh the token via a `refresh_token`.
 
 In addition, we are using a dependency in all existing endpoints to check if the user is authenticated.
+
+### Step 4: DB Integration
+```shell
+git checkout origin/step-4
+```
+In this step we integrate the application with a database. We use SQLModel from the FastAPI authoutrs, which in its turn
+is using SQLAlchemy as the ORM. For the demo we are using SQLite as the database. However, postgres or any other database 
+can be used by changing the connection string in the `config.py` file and using corresponding primary key type in 
+`models/base.py`.
+
+In this step we've also introduced `/users` endpoint to add users. Every endpoint was updated to use the injected 
+database session and the user resolved from the authentication header.
