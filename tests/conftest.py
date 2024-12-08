@@ -1,5 +1,6 @@
 import pytest
 from sqlmodel import create_engine, Session, SQLModel, select
+from starlette.testclient import TestClient
 
 from database import get_db_session
 from main import app
@@ -12,6 +13,11 @@ engine = create_engine(TEST_DATABASE_URL, connect_args={"check_same_thread": Fal
 TEST_USER_EMAIL = "test@test.com"
 
 
+@pytest.fixture
+def test_client():
+    return TestClient(app)
+
+
 @pytest.fixture(scope="function", autouse=True)
 def setup_and_teardown():
     try:
@@ -19,9 +25,6 @@ def setup_and_teardown():
     except Exception:
         pass
     SQLModel.metadata.create_all(engine)
-    # with Session(engine) as session:
-    #     session.add(TEST_USER)
-    #     session.commit()
     yield
     SQLModel.metadata.drop_all(engine)
 

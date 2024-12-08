@@ -26,7 +26,8 @@ def create_wishlist(wishlist: WishlistCreate, user: Annotated[User, Depends(get_
 
 @router.get("/", response_model=list[WishlistPublic])
 def get_wishlists(user: Annotated[User, Depends(get_current_user)], db: DbSession):
-    return db.exec(select(Wishlist).where(Wishlist.user_id == user.id)).all()
+    # Easy to use but may be not efficient because it loads wishlist items for every wishlist one by one
+    return user.wishlists
 
 
 @router.get("/{wishlist_id}", response_model=WishlistPublic)
