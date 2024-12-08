@@ -1,6 +1,7 @@
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
+from sqlmodel import select
 
 from routers.security import User, get_current_user
 from app.database import DbSession
