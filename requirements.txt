@@ -4,3 +4,5 @@ pyjwt
 bcrypt
 passlib
 python-multipart
+sqlmodel
+pytest
