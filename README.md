@@ -81,3 +81,12 @@ can be used by changing the connection string in the `config.py` file and using 
 
 In this step we've also introduced `/users` endpoint to add users. Every endpoint was updated to use the injected 
 database session and the user resolved from the authentication header.
+
+### Step 5: Services & Testing
+```shell
+git checkout origin/step-5
+```
+
+This step introduces `services` module to separate the business logic from the API endpoints. We also add integrations
+tests for the `services/wishlist_service.py` and `routers/users.py` to test objects creation and retrieval from the 
+test DB.
