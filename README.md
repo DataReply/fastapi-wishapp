@@ -90,3 +90,13 @@ git checkout origin/step-5
 This step introduces `services` module to separate the business logic from the API endpoints. We also add integrations
 tests for the `services/wishlist_service.py` and `routers/users.py` to test objects creation and retrieval from the 
 test DB.
+
+### Step 6: Python client generation
+```shell
+git checkout origin/step-6
+```
+
+In this step we generate a python client using openapi-generator-cli. The client is generated in the `clients/python` 
+by calling `sh generate.sh python`.
+Then we create a virtual environment and install the client using `sh init.sh` in the `clients/python` directory.
+Finally, we test the client by running `python create_user.py` and `python get_wishlists.py` in the `clients/python` directory.
