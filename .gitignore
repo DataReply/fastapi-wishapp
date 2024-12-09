@@ -12,3 +12,7 @@ __pycache__/
 
 # SQL
 *.sqlite
+
+# Openapi
+clients/**/out/
+clients/**/venv/
