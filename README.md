@@ -3,6 +3,15 @@
 This project is used to demonstrate the use of FastAPI by building a simple REST API for a wish list application.
 The project is divided into multiple steps. Each step can be accessed by checking out the respective branch.
 
+## Features
+By completing the steps, we will have a REST API with the following features:
+* User creation
+* User authentication using JWT tokens
+* CRUD operations for wishlists
+* CRUD (Create & Delete) operations for items in a wishlist
+
+The application will be using SQLite as the database. However, it can be easily changed to use any other database.
+
 ## Installation
 The project is built with python 3.12. We haven't tested it with the older version, but since it's just using the basic
 features of FastAPI, it should work with older versions as well.
@@ -101,3 +110,21 @@ In this step we generate a python client using openapi-generator-cli. The client
 by calling `sh generate.sh python`.
 Then we create a virtual environment and install the client using `sh init.sh` in the `clients/python` directory.
 Finally, we test the client by running `python create_user.py` and `python get_wishlists.py` in the `clients/python` directory.
+
+### Step 7: Pydantic Settings
+```shell
+git checkout origin/step-7
+```
+TBD
+
+### Step 8: Alembic for DB Migrations
+```shell
+git checkout origin/step-8
+```
+TBD
+
+### Step 9: Dockerize the Application
+```shell
+git checkout origin/step-9
+```
+TBD
