@@ -21,6 +21,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Running the app
+```shell
+python -m app.server
+```
+
 ## Steps
 ### Step 1: Basic FastAPI Application
 ```shell
