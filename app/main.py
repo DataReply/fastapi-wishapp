@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from routers import wishlists
+from app.routers import wishlists
 
 app = FastAPI()
 
