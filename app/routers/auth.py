@@ -6,9 +6,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from starlette import status
 
-from config import settings
-from routers.security import authenticate_user, create_access_token, get_jwt_payload, get_active_user
-from schemas.token import Token, RefreshToken
+from app.config import settings
+from app.routers.security import authenticate_user, create_access_token, get_jwt_payload, get_active_user
+from app.schemas.token import Token, RefreshToken
 
 router = APIRouter()
 

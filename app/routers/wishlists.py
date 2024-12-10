@@ -4,7 +4,7 @@ from uuid import uuid4
 
 from fastapi import APIRouter, HTTPException, Depends
 
-from routers.security import User, get_current_user
+from app.routers.security import User, get_current_user
 from app.schemas.whishlist_item import WishlistItem, WishlistItemCreate
 from app.schemas.wishlist import WishlistCreate, Wishlist
 
