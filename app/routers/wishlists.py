@@ -3,8 +3,8 @@ from uuid import uuid4
 
 from fastapi import APIRouter, HTTPException
 
-from schemas.whishlist_item import WishlistItem, WishlistItemCreate
-from schemas.wishlist import WishlistCreate, Wishlist
+from app.schemas.whishlist_item import WishlistItem, WishlistItemCreate
+from app.schemas.wishlist import WishlistCreate, Wishlist
 
 router = APIRouter()
 
