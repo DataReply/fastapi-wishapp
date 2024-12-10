@@ -1,7 +1,7 @@
 # Wishapp
 
-This project is used to demonstrate the use of FastAPI by building a simple REST API for a wish list application.
-The project is divided into multiple steps. Each step can be accessed by checking out the respective branch.
+This project demonstrates the use of FastAPI by building a simple REST API for a wish list application.
+The project is divided into multiple steps. Each step can be accessed by checking out the corresponding branch.
 
 ## Features
 By completing the steps, we will have a REST API with the following features:
