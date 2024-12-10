@@ -8,7 +8,8 @@ from starlette import status
 
 from app.config import settings
 from app.routers.security import authenticate_user, create_access_token, get_jwt_payload, get_active_user
-from app.schemas.token import Token, RefreshToken
+from app.models.token import Token, RefreshToken
+from app.database import DbSession
 
 router = APIRouter()
 

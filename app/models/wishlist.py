@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field, Relationship
 
-from models.base import SqlBaseModel, PrimaryKeyType
-from models.wishlist_item import WishlistItem, WishlistItemPublic
+from app.models.base import SqlBaseModel, PrimaryKeyType
+from app.models.wishlist_item import WishlistItem, WishlistItemPublic
 
 
 

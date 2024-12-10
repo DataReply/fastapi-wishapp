@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field, Relationship
 
-from models.base import SqlBaseModel
-from models.wishlist import Wishlist
+from app.models.base import SqlBaseModel
+from app.models.wishlist import Wishlist
 
 class UserCreate(SQLModel):
     email: str

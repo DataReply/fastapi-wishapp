@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from sqlalchemy.exc import IntegrityError
 
-from database import DbSession
-from routers.security import get_password_hash
-from models.user import User, UserCreate, UserPublic
+from app.database import DbSession
+from app.routers.security import get_password_hash
+from app.models.user import User, UserCreate, UserPublic
 
 router = APIRouter()
 

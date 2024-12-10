@@ -10,8 +10,8 @@ from sqlmodel import select
 from starlette import status
 
 from app.config import settings
-from database import DbSession
-from models.user import User
+from app.database import DbSession
+from app.models.user import User
 
 ALGORITHM = "HS256"
 

@@ -1,6 +1,6 @@
 from sqlmodel import SQLModel, Field, Relationship
 
-from models.base import SqlBaseModel, PrimaryKeyType
+from app.models.base import SqlBaseModel, PrimaryKeyType
 
 
 class WishlistItemCreate(SQLModel):
