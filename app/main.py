@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from database import create_tables
+from app.database import create_tables
 from app.routers import wishlists, auth, users
 
 

@@ -1,10 +1,10 @@
 from fastapi import HTTPException
 from sqlmodel import Session, select
 
-from models.base import PrimaryKeyType
-from models.user import User
-from models.wishlist import Wishlist
-from models.wishlist_item import WishlistItem
+from app.models.base import PrimaryKeyType
+from app.models.user import User
+from app.models.wishlist import Wishlist
+from app.models.wishlist_item import WishlistItem
 
 
 def get_wishlist_or_error(wishlist_id: PrimaryKeyType, user: User, db: Session):

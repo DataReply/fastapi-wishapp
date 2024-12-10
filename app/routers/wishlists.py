@@ -1,16 +1,14 @@
 from typing import Annotated
 
-from fastapi import APIRouter, HTTPException, Depends
-from sqlmodel import select
+from fastapi import APIRouter, Depends
 
-from routers.security import User, get_current_user
 from app.database import DbSession
 from app.models.base import PrimaryKeyType
 from app.models.user import User
 from app.models.wishlist import WishlistCreate, Wishlist, WishlistPublic, WishlistPatch
 from app.models.wishlist_item import WishlistItem, WishlistItemCreate, WishlistItemPublic
 from app.routers.security import get_current_user
-from services.wishlist_services import get_wishlist_or_error, get_wishlist_item_or_error
+from app.services.wishlist_services import get_wishlist_or_error, get_wishlist_item_or_error
 
 router = APIRouter()
 
