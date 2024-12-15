@@ -97,7 +97,8 @@ test DB.
 git checkout origin/step-6
 ```
 
-In this step we generate a python client using openapi-generator-cli. The client is generated in the `clients/python` 
+In this step we generate a python client using [
+OpenAPI Generator](https://openapi-generator.tech/) ([github](https://github.com/OpenAPITools/openapi-generator)). The client is generated in the `clients/python` 
 by calling `sh generate.sh python`.
 Then we create a virtual environment and install the client using `sh init.sh` in the `clients/python` directory.
 Finally, we test the client by running `python create_user.py` and `python get_wishlists.py` in the `clients/python` directory.
