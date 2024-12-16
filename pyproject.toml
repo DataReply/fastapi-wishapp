@@ -13,6 +13,7 @@ pyjwt = "^2.10.1"
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 python-multipart = "^0.0.19"
 sqlmodel = "^0.0.22"
+pydantic-settings = "^2.7.0"
 
 
 [tool.poetry.group.dev.dependencies]

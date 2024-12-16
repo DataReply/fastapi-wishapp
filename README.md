@@ -102,3 +102,16 @@ OpenAPI Generator](https://openapi-generator.tech/) ([github](https://github.com
 by calling `sh generate.sh python`.
 Then we create a virtual environment and install the client using `sh init.sh` in the `clients/python` directory.
 Finally, we test the client by running `python create_user.py` and `python get_wishlists.py` in the `clients/python` directory.
+
+### Step 7: Pydantic Settings
+```shell
+git checkout origin/step-7
+```
+
+[Pydantic Settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) provides optional Pydantic features 
+for loading a settings or config class from environment variables or secrets files.
+with Pydantic settings you can load application configuration from .env files and environment variables automatically.
+Also, it provides a way to validate the settings and provide default values.
+
+In this step we add a common configuration `.env` and one specific to dev environment `.env.dev`. Also, we modify the
+`config.py` to load the configuration based on the environment.
