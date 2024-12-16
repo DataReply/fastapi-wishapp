@@ -1,11 +1,7 @@
 from fastapi import FastAPI
 from fastapi.routing import APIRoute
 
-from app.database import create_tables
 from app.routers import wishlists, auth, users
-
-
-create_tables()
 
 app = FastAPI()
 

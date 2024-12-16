@@ -9,9 +9,6 @@ SQLALCHEMY_DATABASE_URL = settings.SQL_LITE_URL
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}, echo=True)
 
-def create_tables():
-    SQLModel.metadata.create_all(engine)
-
 def get_db_session() -> Session:
     with Session(engine) as session:
         yield session

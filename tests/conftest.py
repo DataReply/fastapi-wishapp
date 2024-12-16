@@ -5,6 +5,8 @@ from starlette.testclient import TestClient
 from app.database import get_db_session
 from app.main import app
 from app.models.user import User
+from app.models.wishlist import Wishlist
+from app.models.wishlist_item import WishlistItem
 
 TEST_DATABASE_URL = "sqlite:///./test.sqlite"
 

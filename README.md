@@ -24,6 +24,10 @@ pip install -r requirements.txt
 
 ## Running the app
 ```shell
+# Init the DB the first time you run the app
+alembic upgrade head
+
+# Run the app
 python -m app.server
 ```
 
@@ -115,3 +119,18 @@ Also, it provides a way to validate the settings and provide default values.
 
 In this step we add a common configuration `.env` and one specific to dev environment `.env.dev`. Also, we modify the
 `config.py` to load the configuration based on the environment.
+
+### Step 8: Alembic for DB Migrations
+```shell
+git checkout origin/step-8
+```
+
+[Alembic](https://alembic.sqlalchemy.org/en/latest/) is a lightweight database migration tool for SQLAlchemy. 
+In this step we initialize alembic by running `alembic init alembic`. This command generates the `alembic` folder and 
+the `alembic.ini` file in the project root folder. We then modify the `alembic.ini` and `env.py` to point to the 
+database URL configured in the `config.py`. Check out the changes in the commit history for this step to what exactly
+was changed.
+
+After the initialization, we generate the initial migration script using `alembic revision --autogenerate -m "Init"`. 
+Then we apply the migration using `alembic upgrade head`. Other alembic commands are mentioned in the 
+`alembic/README.md` file
