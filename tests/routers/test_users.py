@@ -1,7 +1,7 @@
 from sqlmodel import select
 
-import conftest
-from models.user import User
+from tests import conftest
+from app.models.user import User
 
 TEST_EMAIL = "new@user.com"
 

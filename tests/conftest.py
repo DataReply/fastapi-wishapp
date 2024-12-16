@@ -2,9 +2,9 @@ import pytest
 from sqlmodel import create_engine, Session, SQLModel, select
 from starlette.testclient import TestClient
 
-from database import get_db_session
-from main import app
-from models.user import User
+from app.database import get_db_session
+from app.main import app
+from app.models.user import User
 
 TEST_DATABASE_URL = "sqlite:///./test.sqlite"
 

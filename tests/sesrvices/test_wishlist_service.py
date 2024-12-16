@@ -1,10 +1,10 @@
 import pytest
 from fastapi import HTTPException
 
-from models.user import User
-from models.wishlist import Wishlist
-from models.wishlist_item import WishlistItem
-from services.wishlist_services import get_wishlist_or_error, get_wishlist_item_or_error
+from app.models.user import User
+from app.models.wishlist import Wishlist
+from app.models.wishlist_item import WishlistItem
+from app.services.wishlist_services import get_wishlist_or_error, get_wishlist_item_or_error
 
 
 def test_get_wishlist_raises_error_when_wishlist_does_not_exist(test_db_session):
